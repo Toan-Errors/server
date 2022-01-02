@@ -16,6 +16,9 @@ exports.item_create = (req, res) => {
         res.status(500).json({
             success: false,
             message: 'Thêm mới thất bại',
+            error: {
+                error
+            }
         });
     });
 };
