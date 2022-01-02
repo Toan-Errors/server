@@ -4,7 +4,7 @@ exports.item_create = (req, res) => {
     const item = new Item({
         name: req.body.name,
         description: req.body.description,
-        status: req.body.status
+        status: req.body.status ? req.body.status : false
     });
     item.save().then(createdItem => {
         res.status(201).json({
